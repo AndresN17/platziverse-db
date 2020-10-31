@@ -4,7 +4,8 @@
   "description": "A simple platform of IOT --DB Module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "DEBUG=platziverse:* nyc --reporter=lcov ava --verbose",
+    "setup": "DEBUG=platziverse:* node setup.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,21 @@
   "bugs": {
     "url": "https://github.com/AndresN17/platziverse-db/issues"
   },
-  "homepage": "https://github.com/AndresN17/platziverse-db#readme"
+  "homepage": "https://github.com/AndresN17/platziverse-db#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "debug": "^4.2.0",
+    "defaults": "^1.0.3",
+    "inquirer": "^7.3.3",
+    "pg": "^8.4.2",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "ava": "^3.13.0",
+    "nyc": "^15.1.0",
+    "proxyquire": "^2.1.3",
+    "sinon": "^9.2.1",
+    "sqlite3": "^5.0.0"
+  }
 }
